@@ -111,6 +111,7 @@ int main()
 	// *********** Mount SD Card and Initialize Variables ****************//
 
 	// ******************* POLLING LOOP *******************//
+	u32 test = 0;
 	while(1){
 		/*XUartPs_SetOptions(&Uart_PS,XUARTPS_OPTION_RESET_RX);	// Clear UART Read Buffer
 		memset(RecvBuffer, '0', 32);	*/						// Clear RecvBuffer Variable
@@ -607,7 +608,7 @@ int main()
 		default :
 			break;
 		} // End Switch-Case Menu Select*/
-		u32 test = Xil_In32(XPAR_AXI_GPIO_13_BASEADDR);
+		test = Xil_In32(XPAR_AXI_GPIO_13_BASEADDR);
 		Xil_Out32(XPAR_AXI_GPIO_4_BASEADDR,1);
 
 	}	// ******************* POLLING LOOP *******************//
